@@ -19,9 +19,17 @@ confirmPassword: any;
 
   constructor(private fb:FormBuilder){
     this.registerForma = this.fb.group({
-          name: ['', Validators.required],
+        fullName: ['', Validators.required],
           email: ['', [Validators.required, Validators.email] ],
-          password: ['', [Validators.required]]
+          password: ['', [Validators.required]],
+          confirmPassword: ['', [Validators.required]]
         })
   }
+
+
+  onRegister(){
+    console.log(this.registerForma.value);
+  }
+
+
 }

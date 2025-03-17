@@ -1,4 +1,4 @@
-<form [formGroup]="registerForma">
+<form [formGroup]="registerForma" (ngSubmit)="onRegister()">
     <p-card header="Ingresar al sistema" [style]="{width: '400px'}">
         
         <div class="field">
@@ -66,7 +66,7 @@
             Contraseñas no coinciden
         </small>
 
-        <p-button label="Registrar Miriam" class="w-full" [disabled]="registerForma.invalid"></p-button>
+        <p-button label="Registrar Miriam" class="w-full" [disabled]="registerForma.invalid" type="submit"></p-button>
         <div class="mt-2">
             ¿Ya eres miembro? <a routerLink="/register">Ingresar</a>
         </div>
